@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawfect Adoptions - Find Your Furry Friend</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <header>
+        <nav class="navbar glass-effect">
+            <div class="nav-brand">
+                <i class="ph ph-paw-print"></i>
+                Pawfect Adoptions
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pets">Pets</a></li>
+                <li><a href="#adopt">Adopt</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content glass-effect fade-in-up">
+                <h1>Find Your Perfect <span class="highlight">Companion</span></h1>
+                <p>All our animals are healthy, vaccinated, and ready for a loving home today. Start your adoption
+                    journey with us.</p>
+                <button class="btn-primary" onclick="scrollToSection('pets')">
+                    Browse Pets <i class="ph ph-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="pets" class="pets-section">
+            <h2 class="section-title">Available Pets</h2>
+            <div class="pets-grid" id="petsGrid">
+                <!-- Pets will be populated by JavaScript -->
+            </div>
+            <button class="btn-secondary load-more" onclick="loadMorePets()">
+                Load More <i class="ph ph-caret-down"></i>
+            </button>
+        </section>
+
+        <section id="adopt" class="adopt-section">
+            <div class="adopt-container glass-effect">
+                <h2 class="section-title">Adopt a Pet</h2>
+                <form id="adoptForm" onsubmit="handleAdopt(event)">
+                    <div class="input-group">
+                        <i class="ph ph-user"></i>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="ph ph-envelope-simple"></i>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="ph ph-paw-print"></i>
+                        <select id="petSelect" required>
+                            <option value="">Select a Pet</option>
+                            <!-- Options populated by JS -->
+                        </select>
+                    </div>
+                    <div class="input-group textarea-group">
+                        <textarea placeholder="Why do you want to adopt this pet?" required rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        Submit Application <i class="ph ph-paper-plane-right"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="glass-effect">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="ph ph-paw-print"></i>
+                Pawfect Adoptions
+            </div>
+            <p>&copy; 2026 Pawfect Adoptions. All rights reserved.</p>
+            <p>Email: <a href="mailto:info@pawfectadoptions.com">info@pawfectadoptions.com</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
